@@ -1,0 +1,49 @@
+[
+  {
+    "name" : "BLACK BEAN DIP",
+    "ingredients" : "- 1 can of Black Bean Soup \n- 1 can of tomato sauce \n-  1 cup of sour cream \n- 1⁄2 teaspoon chili powder (or spicy substitute like cayenne pepper) \n- Tortilla chips, corn chips, or crackers",
+    "instructions" : "1) Combine the black bean soup, tomato sauce, sour cream, and chili powder in a bowl. \n2) Mix the ingredients in the bowl until combined. \n3) Heat in microwave until warm. \n4) Serve with tortilla chips, corn chips, or crackers."
+  },
+  {
+    "name" : "VEGETABLE RICE SOUP",
+    "ingredients" : "- 1 can of chicken broth \n- 2 cans of mixed vegetables (drained) \n- 1 can of white beans (undrained) \n- 1 cup of rice \n- 1⁄4 cup of cheese ",
+    "instructions" : "1) In a large saucepan, boil the chicken broth on high heat for 3 to 5 minutes. \n2) In a different large pot, boil 4 cups of water, add rice, and cook for 10 minutes. Then drain the water from the rice. \n3) Stir in the two cans of vegetables, beans with their liquid, and the cooked rice to the large saucepan with the chicken broth. Cook for about 5 minutes.\n4) Serve the soup and sprinkle cheese on top."
+  },
+  {
+    "name" : "POTATO SOUP",
+    "ingredients" : "-  1 chopped onion \n-  3 stalks of chopped celery \n-  2 tablespoons of butter \n-  4 chopped potatoes \n-  1-2 grated carrots \n-  1 can of peas (drained) \n-  1 can of corn (drained) \n-  1⁄2 cup of instant dried milk",
+    "instructions" : "-  Cook onions and celery in butter for 3 minutes in a pot. \n-  Add potatoes and carrots to pan and add 3 cups of water and bring the mixture to a boil. \n-  Cook the mixture for 20 minutes until the potatoes are soft and mash the potatoes against the side of the pot. \n-  Add the peas, corn, dried milk, and 1⁄2 cup of water to the soup. \n-  Spoon the soup into bowls and serve. "
+  },
+
+  {
+    "name" : "CHEESE QUESADILLAS",
+    "ingredients" : "-  4 flour tortillas \n-  1 cup of shredded cheese \n-  2 tablespoons of butter \n-  1 can of salsa  \n-  1 can of drained black beans",
+    "instructions" : "-  Lay the tortillas flat and add cheese on one half of each tortilla and fold the tortilla in half. \n-  Put 1⁄2 tablespoon of butter in a pan over medium heat and add the folded tortilla on the melted butter. \n-  Cook each side for 2 minutes or until golden brown. \n-  Cut each folded tortilla into 4 piece and serve with salsa and drained black beans."
+  },
+  {
+    "name" : "TURKEY WRAPS",
+    "ingredients" : "-  2 flour tortillas \n-  6 tablespoons of cream cheese \n-  1 sliced cucumber \n-  Sliced turkey (or ham, bologna, or any other sliced meat) \n-  1 sliced tomato",
+    "instructions" : "-  Spread 3 tablespoons of cream cheese on each tortilla  \n-  Place the slices of meat, cucumbers, and tomatoes on each tortilla and wrap them  up. \n- Cut the wraps in half and serve."
+  },
+  {
+    "name" : "CHICKPEA STEW",
+    "ingredients" : "-  2 cans of chickpeas \n-  3 cloves of garlic \n-  2 tablespoons of olive oil \n-  1⁄2 teaspoons of red pepper flakes \n-  1 cup orange juice \n-  2 cans tomatoes \n-  1⁄2 teaspoon of salt",
+    "instructions" : "-  Drain the chickpeas and chop the garlic. \n-  Heat the oil in a large pan over medium-low heat. \n-  Sauté garlic in oil for 1 minute. \n-  Stir in red pepper flakes and thyme and cook for 15 seconds. \n-  Add the orange juice, tomatoes, and drained chickpeas and bring to a boil. \n-  Reduce heat to low and simmer for 10 minutes or until the sauce thickens. \n-  Season with a 1⁄2 teaspoon of salt."
+  },
+  {
+    "name" : "CARROT FRIES",
+    "ingredients" : "- 10 medium sized carrots \n- 2 tablespoons of olive oil \n- 2 tablespoons of rosemary (optional) \n- 1 teaspoon of sugar \n- 1⁄2 teaspoon of salt",
+    "instructions"  : "1) Pre-heat the oven to 425°F. \n2) Peel and cut the carrots into sticks. \n3) In a mixing bowl, combine carrots sticks, olive oil, rosemary, sugar, and salt until the carrots are completely covered with the mixture. \n4) Spread out the carrot sticks on a pan and bake for 20 minutes."
+  },
+  {
+    "name" : "ASPARAGUS ROLL UP",
+    "ingredients" : "- 4 slices of ham\n- 2 cans of asparagus spears\n- 4 tablespoons of cream cheese",
+    "instructions" : "1) Place the ham down and place 1 teaspoon of cream cheese on the ham. \n2) Place the asparagus spear on the cream cheese and roll it up. \n3) Place on a pan and bake for 15-20 minutes."
+  },
+  {
+    "name" : "VEGGIE MASHED POTATOES",
+    "ingredients" : "- 1⁄2 pounds of potatoes\n- 1⁄2 stick of butter\n- salt\n- 1⁄2 cup of milk\n- 1 can of drained peas\n- 1 can of drained corn",
+    "instructions" : "1) Cut the potatoes in cubes and place  them in a pot and cover the potatoes in water. \n2) Bring the water to a boil, reduce the heat to medium, and cook for 20-25 minutes. \n3) Drain the potatoes and mash the potatoes. \n4) Add milk, butter, and salt to taste and mix. \n5) Stir in vegetables and serve."
+  }
+
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "name" : "PEACH YOGURT PIE",
+    "ingredients" :
+    "- 1 can of sliced peaches \n- 2 containers of fruit flavored yogurt  \n- 3 cups of whipped cream (of 1 carton of Cool Whip)  \n- 1 graham cracker crust*",
+    "instructions" :
+    "- Combine the sliced peaches and the yogurt. \n- Fold in the whipped cream and mix well. \n- Spoon the mixture into the crust and freeze for 4 hours. \n- Remove from freezer and let the pie sit in the refrigerator for 30 minutes before serving. "
+  },
+  {
+    "name" : "GRAHAM CRACKER CRUST",
+    "ingredients" :
+    "- 1 1/2 cups of graham cracker crumbs  \n- 2 tablespoons of sugar  \n- 6 tablespoons of butter (melted)",
+    "instructions" :
+    "- Preheat oven to 350 degrees \n- Combine the graham cracker crumbs, sugar, and melted butter.  \n- Press the mixture into  a 9-inch pie pan  \n- Bake for 10 minutes at 350 degrees.  \n- Remove from oven, cool, and fill the crust with any type of filling. "
+  },
+  {
+    "name" : "STRAWBERRY CHEESECAKE",
+    "ingredients" :
+    "- 3 packages of (8 ounce) cream cheese \n- 1 cup of sugar  \n- 5 eggs  \n- 11/2 teaspoons of vanilla \n- 1/2  carton of strawberries \n- 1 (unbaked) graham cracker crust*",
+    "instructions" :
+    "- Preheat oven to 350 degrees  \n- Beat the cream cheese and eggs together while adding one egg at a time.  \n- Add the sugar and vanilla.  \n- Pour the mixture into a graham cracker crust.  \n- Bake for 1 hour at 350 degrees.  \n- Remove from oven, let cool, and refrigerate until ready to serve. "
+  },
+  {
+    "name" : "APPLE CARROT CAKE",
+    "ingredients" :
+    "- 1 package of carrot cake mix \n- 1 cup vegetable oil  \n- 3 eggs \n- 1 cup of applesauce",
+    "instructions" :
+    "- Preheat oven to 350 degrees \n- Combine the carrot cake mix, eggs, and oil and mix well. \n- Add the applesauce and mix well.  \n- Pour into a pre-greased pan and bake at 350 for 35 minutes. \n- Remove from oven, let cool, and serve. "
+  },
+  {
+    "name" : "FRUIT COCKTAIL CAKE",
+    "ingredients" :
+    "- 1 can of fruit cocktail (undrained) \n- 4 cups of flour \n- 2 cups of sugar \n- 2 teaspoons of baking soda  \n- (Optional Frosting: 1 cup of sugar, 1 can of evaporated milk, 1/2  cup butter, 1 teaspoon of vanilla) ",
+    "instructions" :
+    "- Preheat oven to 300 degrees \n- Mix the fruit cocktail, flour, sugar, and baking soda.  \n- Pour mixture into a greased pan.  \n- Bake at 300 for 45 minutes.  \n- (For optional frosting: Cook all ingredients over medium heat until thick. Spread over cake.) "
+  },
+  {
+    "name" : "PEANUT BUTTER COOKIES",
+    "ingredients" :
+    "- 1 cup of peanut butter  \n- 1 egg  \n- 1 cup of sugar  \n- 1 teaspoon of vanilla ",
+    "instructions" :
+    "- Mix the peanut butter, egg, sugar, and vanilla together.  \n- Form the mixture into 1-inch balls.  \n- Press the 1-inch balls flat onto a greased cookie sheet using a fork.  \n- Bake for 10 minutes at 350 degrees.    \n- Remove from oven, cool, and serve. "
+  },
+  {
+    "name" : "FRUIT PARFAIT",
+    "ingredients" :
+    "- 1 can of any fruit or fruit mix (drained) or 1 container of fresh fruit  \n- 2 (6-ounce) containers of yogurt (any flavor)  \n- 4 cups of granola or any cereal ",
+    "instructions" :
+    "- In four different bowls, begin to add the layers of ingredients  \n- For the first layer, add 1/2 of the can of fruit (or 1/2 cup of fresh fruit) per bowl. \n- For the second layer, add 1/2 of the container of yogurt per bowl.  \n- For the last layer, add 1 cup of the granola or cereal to each bowl. \n- Refrigerate and serve. "
+  }
+
+]
