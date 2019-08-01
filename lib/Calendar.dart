@@ -28,7 +28,7 @@ class CalendarThing extends StatefulWidget {
 class _CalendarThing extends State<CalendarThing> {
   DateTime _currentDate = DateTime.now();
   String _currentMonth = '';
-  List<DateTime> _markedDate = [DateTime(2018, 9, 20), DateTime(2018, 10, 11)];
+  List<DateTime> _markedDate = [];
   static Widget _eventIcon = new Container(
     decoration: new BoxDecoration(
         color: Colors.blue,
@@ -36,52 +36,31 @@ class _CalendarThing extends State<CalendarThing> {
         ),
   );
 
-  EventList<Event> _markedDateMap = new EventList<Event>(
-    events: {
-      new DateTime(2019, 3, 11): [
-        new Event(
-          date: new DateTime(2019, 3, 11),
-          title: 'Event 2',
-          icon: _eventIcon,
-        ),
-      ],
-    },
-  );
+  Set<DateTime> ListOfDates = {
+    new DateTime(2018,11,19),
+    new DateTime(2018,12,27),
+    new DateTime(2019,1,19),
+    new DateTime(2019,2,15),
+    new DateTime(2019,3,11),
+    new DateTime(2019,4,19),
+    new DateTime(2019,5,18),
+    new DateTime(2019,6,15)
+  };
+  EventList<Event> _markedDateMap = new EventList<Event>();
 
   CalendarCarousel _calendarCarousel, _calendarCarouselNoHeader;
 
   @override
   void initState() {
-    /// Add more events to _markedDateMap EventList
-    _markedDateMap.add(
-        new DateTime(2019, 4, 19),
-        new Event(
-          date: new DateTime(2019, 4, 19),
-          title: 'work',
-          icon: _eventIcon,
-        ));
-
-    _markedDateMap.add(
-      new DateTime(2019, 2, 15),
-      new Event(
-        date: new DateTime(2018, 12, 10),
-        title: 'Event 4',
-        icon: _eventIcon,
-    ));
-    _markedDateMap.add(
-        new DateTime(2019, 1, 11),
-        new Event(
-          date: new DateTime(2018, 12, 10),
-          title: 'Event 4',
-          icon: _eventIcon,
-        ));
-    _markedDateMap.add(
-        new DateTime(2018, 12, 27),
-        new Event(
-          date: new DateTime(2018, 12, 10),
-          title: 'Event 4',
-          icon: _eventIcon,
-        ));
+    for( DateTime event in ListOfDates) {
+      _markedDateMap.add(
+          event,
+          new Event(
+            date: event,
+            title: 'Fresh Hub Event',
+            icon: _eventIcon,
+          ));
+    }
     super.initState();
   }
 
@@ -141,7 +120,7 @@ class _CalendarThing extends State<CalendarThing> {
       markedDateIconBuilder: (event) {
         return event.icon;
       },
-      minSelectedDate: new DateTime.now(),
+      minSelectedDate: new DateTime(2018,1,1),
       maxSelectedDate: new DateTime(2020,1,1),
 //      inactiveDateColor: Colors.black12,
       onCalendarChanged: (DateTime date) {
