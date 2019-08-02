@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Map extends StatefulWidget {
   Map({Key key, this.title}) : super(key: key);
@@ -14,8 +14,8 @@ class Map extends StatefulWidget {
 
 
 class _MapState extends State<Map>{
-  final Completer<GoogleMapController> _controller = Completer<GoogleMapController>();
-
+  GoogleMapController _controller;
+  double zoom = 11.0;
   static const LatLng _center = const LatLng(29.656388, -95.3585341);
   final Set<Marker> _markers = new Set();
   LatLng _lastMapPosition = _center;
@@ -31,7 +31,7 @@ class _MapState extends State<Map>{
     });
   }
   void _onMapCreated(GoogleMapController controller) {
-    _controller.complete(controller);
+    _controller=controller;
     _onAddMarkerButtonPressed();
   }
   void _onAddMarkerButtonPressed() {
@@ -59,6 +59,16 @@ class _MapState extends State<Map>{
   void _onCameraMove(CameraPosition position){
     _lastMapPosition = position.target;
   }
+  void _zoomIn(){
+    _controller.animateCamera(
+      CameraUpdate.zoomIn(),
+    );
+  }
+  void _zoomOut(){
+    _controller.animateCamera(
+      CameraUpdate.zoomOut(),
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -69,11 +79,14 @@ class _MapState extends State<Map>{
               onMapCreated: _onMapCreated,
               initialCameraPosition: CameraPosition(
                 target: _center,
-                zoom: 11.0,
+                zoom: zoom,
               ),
               mapType: _currentMapType,
               markers: _markers,
               onCameraMove: _onCameraMove,
+              rotateGesturesEnabled: true,
+              scrollGesturesEnabled: true,
+              tiltGesturesEnabled: true,
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -86,6 +99,20 @@ class _MapState extends State<Map>{
                       materialTapTargetSize: MaterialTapTargetSize.padded,
                       backgroundColor: Colors.green,
                       child: const Icon(Icons.map, size: 36.0),
+                    ),
+                    SizedBox(height: 16.0),
+                    FloatingActionButton(
+                      onPressed: _zoomIn,
+                      materialTapTargetSize: MaterialTapTargetSize.padded,
+                      backgroundColor: Colors.green,
+                      child: new Icon(FontAwesomeIcons.searchPlus, size: 36.0),
+                    ),
+                    SizedBox(height: 16.0),
+                    FloatingActionButton(
+                      onPressed: _zoomOut,
+                      materialTapTargetSize: MaterialTapTargetSize.padded,
+                      backgroundColor: Colors.green,
+                      child: new Icon(FontAwesomeIcons.searchMinus, size: 36.0),
                     ),
                     SizedBox(height: 16.0),
                   ],
