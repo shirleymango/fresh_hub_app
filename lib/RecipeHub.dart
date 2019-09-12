@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fresh_hub_app/appetizers_page.dart';
-import 'package:fresh_hub_app/main_courses_page.dart';
-import 'package:fresh_hub_app/desserts_page.dart';
+import 'appetizers_page.dart';
+import 'main_courses_page.dart';
+import 'desserts_page.dart';
 
 void main(){
   runApp(RecipeHub());
@@ -100,6 +100,3 @@ class _RecipeHubState extends State<RecipeHub> {
     );
   }
 }
-
-
-

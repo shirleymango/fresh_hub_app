@@ -72,7 +72,7 @@ class _PhotoHubState extends State<PhotoHub> with SingleTickerProviderStateMixin
             new first.PhotoHub(),
             new second.Calendar(),
             new third.RecipeHub(),
-            new fourth.Survey(),
+            new fourth.InformationHub(),
             new fifth.Map(),
           ]
       ),

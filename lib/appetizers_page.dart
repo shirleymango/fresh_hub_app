@@ -7,6 +7,7 @@ class AppetizersPage extends StatelessWidget{
     showDialog(
         context: context,
         builder: (context) => Center(
+          child: SingleChildScrollView (
           child: Padding(
             padding: const EdgeInsets.all(5.0),
             child: Card(
@@ -49,6 +50,7 @@ class AppetizersPage extends StatelessWidget{
                 ),
               ),
             ),
+          ),
           ),
         )
     );

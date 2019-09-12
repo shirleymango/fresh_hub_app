@@ -10,6 +10,7 @@ class DessertsPage extends StatelessWidget{
           child: Padding(
             padding: const EdgeInsets.all(5.0),
             child: Card(
+              child: SingleChildScrollView (
               child: Padding(padding: const EdgeInsets.all(3.0),
                 child: new Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -49,6 +50,7 @@ class DessertsPage extends StatelessWidget{
                 ),
               ),
             ),
+          ),
           ),
         )
     );

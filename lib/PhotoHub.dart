@@ -8,6 +8,7 @@ import 'sunnyside_3.dart';
 import 'sunnyside_4.dart';
 import 'kashmere_3.dart';
 import 'kashmere_4.dart';
+import 'sunnyside_5.dart';
 
 const URL = "https://www.freshhubhouston.com/";
 
@@ -60,6 +61,21 @@ Widget getListView(BuildContext context) {
               VerticalPadding(
                 color: Colors.transparent,
               ),
+              RaisedButton(
+                color: Colors.green,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => sunnyside_5()));
+                },
+                child: Text(
+                  "Sunnyside 8/12/19",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
               // Added 4
               RaisedButton(
                 color: Colors.green,
@@ -70,7 +86,7 @@ Widget getListView(BuildContext context) {
                           builder: (context) => kashmere_4()));
                 },
                 child: Text(
-                  "Kashmere 6/15/19",
+                  "Kashmere 6/14/19",
                   style: TextStyle(
                     color: Colors.white,
                   ),

@@ -8,11 +8,11 @@ class Calendar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'calendar',
+      title: 'dooboolab flutter calendar',
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new CalendarThing(title: 'Calendar'),
+      home: new CalendarThing(title: 'Event Calendar (shown as blue dots)'),
     );
   }
 }
@@ -44,7 +44,14 @@ class _CalendarThing extends State<CalendarThing> {
     new DateTime(2019,3,11),
     new DateTime(2019,4,19),
     new DateTime(2019,5,18),
-    new DateTime(2019,6,15)
+    new DateTime(2019,6,14),
+    new DateTime(2019,8,12),
+    new DateTime(2019,9,21),
+    new DateTime(2019,10,11),
+    new DateTime(2019,11,25),
+    new DateTime(2019,12,23),
+    new DateTime(2020,1,17),
+    new DateTime(2020,2,15),
   };
   EventList<Event> _markedDateMap = new EventList<Event>();
 
@@ -100,6 +107,7 @@ class _CalendarThing extends State<CalendarThing> {
     _calendarCarouselNoHeader = CalendarCarousel<Event>(
       onDayPressed: (DateTime date, List<Event> events) {
         this.setState(() => _currentDate = date);
+        showSummary(context, date);
         events.forEach((event) => print(event.title));
       },
       // weekendTextStyle: TextStyle(
@@ -121,7 +129,7 @@ class _CalendarThing extends State<CalendarThing> {
         return event.icon;
       },
       minSelectedDate: new DateTime(2018,1,1),
-      maxSelectedDate: new DateTime(2020,1,1),
+      maxSelectedDate: new DateTime(2050,1,1),
 //      inactiveDateColor: Colors.black12,
       onCalendarChanged: (DateTime date) {
         this.setState(() => _currentMonth = DateFormat.yMMM().format(date));
@@ -188,4 +196,115 @@ class _CalendarThing extends State<CalendarThing> {
           ),
         ));
   }
+
+showSummary(BuildContext context, DateTime date) {
+   var eventDetailMaps = {
+    new DateTime(2018,11,19) : "Sunnyside Multi-Service Center",
+    new DateTime(2018,12,27) : "Kashmere Multi-Service Center",
+    new DateTime(2019,1,19) : "Sunnyside Multi-Service Center",
+    new DateTime(2019,2,15) : "Kashmere Multi-Service Center",
+    new DateTime(2019,3,11) : "Sunnyside Multi-Service Center",
+    new DateTime(2019,4,19) : "Kashmere Multi-Service Center",
+    new DateTime(2019,5,18) : "Sunnyside Multi-Service Center",
+    new DateTime(2019,6,14) : "Kashmere Multi-Service Center",
+    new DateTime(2019,8,12) : "Sunnyside Multi-Service Center",
+    new DateTime(2019,9,21) : "Sunnyside Multi-Service Center",
+    new DateTime(2019,10,11) : "Kashmere Multi-Service Center",
+    new DateTime(2019,11,25)  : "Sunnyside Multi-Service Center",
+    new DateTime(2019,12,23) : "Kashmere Multi-Service Center",
+    new DateTime(2020,1,17) : "Kashmere Multi-Service Center",
+    new DateTime(2020,2,15) : "Sunnyside Multi-Service Center"
+
+    };
+
+    if (eventDetailMaps.containsKey(date))
+    {
+      var sunnysideAddress = """9314 Cullen Blvd
+Houston, TX 77051""";
+      var kashmereAddress = """4802 Lockwood Dr 
+Houston, TX 77026""";
+
+    var location  = eventDetailMaps[date];
+    var address = location.contains("Sunny") ? sunnysideAddress : kashmereAddress;
+    var eventTime = DateFormat('EEEE').format(date) == "Friday" ? "3:00 PM - 5:00 PM" : "11:00 AM - 1:00 PM";
+    var dateDisp = DateFormat('MM/dd/yyyy').format(date);
+    var contactNo = location.contains("Sunny") ? "(832) 395-0069" : "(832) 393-5503";
+
+
+    showDialog(
+        context: context,
+        builder: (context) => Center(
+          child: SingleChildScrollView (
+          child: Padding(
+            padding: const EdgeInsets.all(1.0),
+            child: Card(
+              child: Padding(padding: const EdgeInsets.all(1.0),
+                child: new Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: <Widget>[
+                      RichText(
+                        text: TextSpan(
+                          style: DefaultTextStyle.of(context).style,
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: "\n" + location,
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25
+                                  
+                              ),
+                            ),
+                            TextSpan(
+                              text: "\n\nDate: ",
+                              style: TextStyle(fontStyle: FontStyle.italic, color: Colors.green, fontWeight: FontWeight.bold, fontSize: 20),
+                            ),
+                            TextSpan(
+                                text: dateDisp,
+                                style: TextStyle(color : Colors.black, fontSize: 20)
+                            ),
+                            TextSpan(
+                              text: "\nTime: ",
+                              style: TextStyle(fontStyle: FontStyle.italic, color: Colors.green, fontWeight: FontWeight.bold, fontSize: 20),
+                            ),
+                            TextSpan(
+                                text: eventTime,
+                                style: TextStyle(color : Colors.black, fontSize: 20)
+                            ),
+                            TextSpan(
+                              text: "\nAddress: \n",
+                              style: TextStyle(fontStyle: FontStyle.italic, color: Colors.green, fontWeight: FontWeight.bold, fontSize: 20),
+                            ),
+                            TextSpan(
+                                text: address + "\n",
+                                style: TextStyle(color : Colors.black, fontSize: 20)
+                            ),
+                            // TextSpan(
+                            //   text: "\n\nContact: ",
+                            //   style: TextStyle(fontStyle: FontStyle.italic, color: Colors.green, fontWeight: FontWeight.bold, fontSize: 20),
+                            // ),
+                            // TextSpan(
+                            //     text: contactNo,
+                            //     style: TextStyle(color : Colors.black, fontSize: 20)
+                            // ),
+                            
+                          ],
+                        ),
+                      )
+                    ]
+                ),
+              ),
+            ),
+          ),
+          ),
+        )
+    );
+
+    
+
+
+  }
+}
+    
+
 }
