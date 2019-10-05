@@ -9,6 +9,8 @@ import 'sunnyside_4.dart';
 import 'kashmere_3.dart';
 import 'kashmere_4.dart';
 import 'sunnyside_5.dart';
+import 'sunnyside_6.dart';
+import 'local_notification_widget.dart';
 
 const URL = "https://www.freshhubhouston.com/";
 
@@ -16,6 +18,7 @@ class PhotoHub extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: new Scaffold(
           body: getListView(context),
         )
@@ -23,43 +26,88 @@ class PhotoHub extends StatelessWidget{
   }
 }
 
+
+
 Widget getListView(BuildContext context) {
   var listView = ListView(
       children: <Widget>[
         new Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              new produceImage(),
+              //  new produceImage(),
+              // VerticalPadding(
+              //   color: Colors.transparent,
+              //   padding: 0,
+              //   child: LocalNotificationWidget(),
+  
+              // ),
+              // Text("Fresh Hub",
+              //   style: TextStyle(fontFamily: 'Abril Fatface', fontSize: 50),
+              // ),
+              // VerticalPadding(
+              //   color: Colors.transparent,
+              // ),
+              // Text("Mission: Our aim is to provide fresh, nutritional food to Houstonians in food deserts.",
+              //     style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 17),
+              //     textAlign: TextAlign.center),
+              // VerticalPadding(
+              //   color: Colors.transparent,
+              // ),
+              // Text("Click on the button below to visit our website.",
+              //     style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Questrial'),
+              //     textAlign: TextAlign.center),
+              // Website(),
+              Text("NEXT EVENT", style: TextStyle(decoration: TextDecoration.underline, fontFamily: 'Abril Fatface', fontSize: 30)),
               VerticalPadding(
                 color: Colors.transparent,
               ),
-              Text("Fresh Hub",
-                style: TextStyle(fontFamily: 'Abril Fatface', fontSize: 50),
-              ),
-              VerticalPadding(
-                color: Colors.transparent,
-              ),
-              Text("Mission of Fresh Hub: Our aim is to provide fresh, nutritional food to Houstonians in food deserts.",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Questrial'),
+              Text("Join us for free fresh groceries and more!",
+                  style: TextStyle(fontWeight: FontWeight.normal, fontFamily: 'Questrial', fontSize: 20),
                   textAlign: TextAlign.center),
               VerticalPadding(
                 color: Colors.transparent,
               ),
-              Text("Click on the button below to visit our website.",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Questrial'),
+              Text("Kashmere Multi-Service Center",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 20, decoration: TextDecoration.underline),
                   textAlign: TextAlign.center),
-              Website(),
+              VerticalPadding( padding: 4),
+              Text("3:00 PM - 5:00 PM",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 20),
+                  textAlign: TextAlign.center),
+              VerticalPadding( padding: 2),
+              Text("10/11/2019 (Friday)",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 20),
+                  textAlign: TextAlign.center),
+              VerticalPadding( padding: 4),
+              Text("4802 Lockwood Dr, Houston, TX 77026",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 20, decoration: TextDecoration.underline),
+                  textAlign: TextAlign.center),
               VerticalPadding(
                 color: Colors.transparent,
               ),
-              Text("Click on the buttons below to see photos and videos. Go to the navigation bar to check out more cool features.",
-                  textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Questrial')),
+              // Text("Click on the buttons below to see photos and videos of previous events. Go to the navigation bar to check out more cool features.",
+              //     textAlign: TextAlign.center, style: TextStyle(fontFamily: 'Questrial')),
               VerticalPadding(
                 color: Colors.transparent,
               ),
               Text("EVENT PHOTOS", style: TextStyle(decoration: TextDecoration.underline, fontFamily: 'Abril Fatface', fontSize: 30)),
               VerticalPadding(
                 color: Colors.transparent,
+              ),
+              RaisedButton(
+                color: Colors.green,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => sunnyside_6()));
+                },
+                child: Text(
+                  "Sunnyside 9/21/19",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
               ),
               RaisedButton(
                 color: Colors.green,
@@ -212,7 +260,7 @@ class produceImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var assetsImage = new AssetImage('assets/images/produce.jpg');
-    var image = new Image(image: assetsImage, width: 415, height: 250.0);
+    var image = new Image(image: assetsImage, width: 620, height: 250);
     return new Container(child: image);
   }
 }
@@ -238,6 +286,26 @@ class VerticalPadding extends StatelessWidget {
   VerticalPadding({
     @required this.child,
     this.padding = 8.0,
+    this.color = Colors.transparent,
+  });
+  final double padding;
+  final Widget child;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: color,
+      padding: EdgeInsets.symmetric(vertical: padding),
+      child: child,
+    );
+  }
+}
+
+class VerticalPaddingThin extends StatelessWidget {
+  VerticalPaddingThin({
+    @required this.child,
+    this.padding = 4.0,
     this.color = Colors.transparent,
   });
   final double padding;

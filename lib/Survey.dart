@@ -11,7 +11,9 @@ class InformationHub extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return new MaterialApp(
+      
       title: 'Welcome to the Information Hub!',
+      debugShowCheckedModeBanner: false,
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -250,7 +252,7 @@ class Survey extends StatefulWidget{
 class _SurveyState extends State<Survey>{
   Future launchURL(String url) async {
     if (await canLaunch(url))
-      await launch(url, forceSafariVC: true, forceWebView: true);
+      await launch(url, forceSafariVC: true, forceWebView: false);
   }
 
   @override
@@ -270,4 +272,3 @@ class _SurveyState extends State<Survey>{
     );
   }
 }
-

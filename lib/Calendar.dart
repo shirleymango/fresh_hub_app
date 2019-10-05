@@ -9,6 +9,7 @@ class Calendar extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'dooboolab flutter calendar',
+      debugShowCheckedModeBanner: false,
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -87,7 +88,7 @@ class _CalendarThing extends State<CalendarThing> {
       //headerText: Container( /// Example for rendering custom header
       // child: Text('Custom Header'),
       //),
-      markedDates: _markedDate,
+     // markedDates: _markedDate,
       weekFormat: true,
       markedDatesMap: _markedDateMap,
       height: 420.0,

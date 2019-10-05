@@ -5,6 +5,7 @@ class kashmere_3 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      debugShowCheckedModeBanner: false,
         home: new Scaffold(
           body: getListView(),
           appBar: AppBar(

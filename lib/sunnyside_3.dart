@@ -5,6 +5,7 @@ class sunnyside_3 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      debugShowCheckedModeBanner: false,
         home: new Scaffold(
           body: getListView(),
           appBar: AppBar(
@@ -48,7 +49,7 @@ Widget getListView() {
               VerticalPadding(
                 color: Colors.white,
               ),
-              new sunnyside2(),
+              new sunnyside2(),              
             ]
         )
       ]

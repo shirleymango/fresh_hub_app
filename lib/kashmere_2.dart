@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:fresh_hub_app/main.dart';
+import 'main.dart';
 
 class kashmere_2 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      debugShowCheckedModeBanner: false,
         home: new Scaffold(
           body: getListView(),
           appBar: AppBar(

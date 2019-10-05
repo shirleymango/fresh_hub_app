@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:fresh_hub_app/main.dart';
+import 'main.dart';
 
 class sunnyside_2 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      debugShowCheckedModeBanner: false,
         home: new Scaffold(
           body: getListView(),
           appBar: AppBar(
@@ -22,7 +23,7 @@ class sunnyside_2 extends StatelessWidget{
                   },
                   child: new Icon(Icons.arrow_back),
                 ),
-                Text("Sunnyside 11/19/18"),
+                Text("Sunnyside 1/19/19"),
               ],
             ),
           ),

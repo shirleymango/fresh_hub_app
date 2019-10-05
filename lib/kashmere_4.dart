@@ -5,6 +5,7 @@ class kashmere_4 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      debugShowCheckedModeBanner: false,
         home: new Scaffold(
           body: getListView(),
           appBar: AppBar(
@@ -22,7 +23,7 @@ class kashmere_4 extends StatelessWidget{
                   },
                   child: new Icon(Icons.arrow_back),
                 ),
-                Text("Kashmere 6/15/19"),
+                Text("Kashmere 6/14/19"),
               ],
             ),
           ),

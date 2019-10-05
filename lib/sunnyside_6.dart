@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
 
-class sunnyside_4 extends StatelessWidget{
+class sunnyside_6 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -23,7 +23,7 @@ class sunnyside_4 extends StatelessWidget{
                   },
                   child: new Icon(Icons.arrow_back),
                 ),
-                Text("Sunnyside 5/18/19"),
+                Text("Sunnyside 9/21/19"),
               ],
             ),
           ),
@@ -49,7 +49,11 @@ Widget getListView() {
               VerticalPadding(
                 color: Colors.white,
               ),
-              new sunnyside2(),              
+              new sunnyside2(), 
+              VerticalPadding(
+                color: Colors.white,
+              ),
+              new sunnyside3(),                
             ]
         )
       ]
@@ -60,7 +64,7 @@ Widget getListView() {
 class groupPic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var assetsImage = new AssetImage('assets/images/sunnyside4-1.jpg');
+    var assetsImage = new AssetImage('assets/images/sunnyside6-1.jpg');
     var image = new Image(image: assetsImage, width: 619.9, height: 250.0);
     return new Container(child: image);
   }
@@ -69,7 +73,7 @@ class groupPic extends StatelessWidget {
 class sunnyside1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var assetsImage = new AssetImage('assets/images/sunnyside4-2.jpg');
+    var assetsImage = new AssetImage('assets/images/sunnyside6-2.jpg');
     var image = new Image(image: assetsImage, width: 619.9, height: 250.0);
     return new Container(child: image);
   }
@@ -78,7 +82,16 @@ class sunnyside1 extends StatelessWidget {
 class sunnyside2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var assetsImage = new AssetImage('assets/images/sunnyside4-3.jpg');
+    var assetsImage = new AssetImage('assets/images/sunnyside6-3.jpg');
+    var image = new Image(image: assetsImage, width: 619.9, height: 250.0);
+    return new Container(child: image);
+  }
+}
+
+class sunnyside3 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var assetsImage = new AssetImage('assets/images/sunnyside6-4.jpg');
     var image = new Image(image: assetsImage, width: 619.9, height: 250.0);
     return new Container(child: image);
   }
