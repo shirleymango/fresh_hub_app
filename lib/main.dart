@@ -4,6 +4,8 @@ import 'Calendar.dart' as second;
 import 'RecipeHub.dart' as third;
 import 'Survey.dart' as fourth;
 import 'Map.dart' as fifth;
+import 'home_grid.dart' as home_grid;
+import 'local_notification_widget.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,10 +15,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Photo Hub',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
       home: PhotoHub(title: "Photo Hub"),
+      //home: home_grid.home_grid(),
     );
   }
 }
@@ -36,7 +40,7 @@ class _PhotoHubState extends State<PhotoHub> with SingleTickerProviderStateMixin
   @override
   void initState() {
     super.initState();
-    controller = new TabController(vsync: this, length: 5);
+    controller = new TabController(vsync: this, length: 6);
   }
 
   @override
@@ -58,6 +62,7 @@ class _PhotoHubState extends State<PhotoHub> with SingleTickerProviderStateMixin
           child: new TabBar(
               controller: controller,
               tabs: <Tab> [
+                new Tab(icon: new Icon(Icons.home)),
                 new Tab(icon: new Icon(Icons.camera_alt)),
                 new Tab(icon: new Icon(Icons.calendar_today)),
                 new Tab(icon: new Icon(Icons.library_books)),
@@ -69,6 +74,7 @@ class _PhotoHubState extends State<PhotoHub> with SingleTickerProviderStateMixin
       body: new TabBarView(
           controller: controller,
           children: <Widget>[
+            new home_grid.home_grid(controller),
             new first.PhotoHub(),
             new second.Calendar(),
             new third.RecipeHub(),
