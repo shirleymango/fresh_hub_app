@@ -1,9 +1,11 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'PhotoHub.dart' as first;
 import 'PhotoHub.dart';
 
 const URL = "https://docs.google.com/forms/d/e/1FAIpQLSeB726Rr2ZGS2QZuo8d7xi-rwTDKT4tPTmjP6_DVYqSwyu4PA/viewform";
+const covidURL = "https://www.freshhubhouston.com/covid-19-support";
 
 class home_grid extends StatelessWidget {
 
@@ -79,6 +81,37 @@ Widget getHomeGridView(BuildContext context, TabController controller) {
               Text("Mission: Our aim is to provide fresh, nutritional food to Houstonians in food deserts.",
                   style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 15),
                   textAlign: TextAlign.center),
+        VerticalPaddingThin(padding: 10,),
+        // Text("COVID-19 Update: Please contact us if you have difficulties accessing fresh food during the pandemic.",
+        //           style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 20),
+        //           textAlign: TextAlign.center),
+
+        new Center(
+          child: new RichText(
+            textAlign: TextAlign.center,
+            text: 
+            new TextSpan(
+              children: [
+                new TextSpan(
+                  text: "COVID-19 Update: Please ",
+                  style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 20),                  
+                ),
+                new TextSpan(
+                  text: 'contact us',
+                  style: new TextStyle(color: Colors.blue, fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 20, decoration: TextDecoration.underline),
+                  recognizer: new TapGestureRecognizer()
+                    ..onTap = () { launch(covidURL);
+                  },
+                ),
+                 new TextSpan(
+                  text: " if you are in need of accessing fresh food during the pandemic.",
+                  style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 20),
+                ),
+              ],
+            ),
+          ),
+        ),
+        
         Flexible(child: grid),
 
       ],);
