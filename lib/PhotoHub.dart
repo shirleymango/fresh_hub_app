@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'sunnyside_7.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'sunnyside_1.dart';
 import 'sunnyside_2.dart';
@@ -10,6 +12,11 @@ import 'kashmere_3.dart';
 import 'kashmere_4.dart';
 import 'sunnyside_5.dart';
 import 'sunnyside_6.dart';
+import 'kashmere_5.dart';
+import 'kashmere_6.dart';
+import 'kashmere_7.dart';
+import 'sunnyside_8.dart';
+import 'redford_1.dart';
 import 'local_notification_widget.dart';
 
 const URL = "https://www.freshhubhouston.com/";
@@ -57,6 +64,8 @@ Widget getListView(BuildContext context) {
               //     style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Questrial'),
               //     textAlign: TextAlign.center),
               // Website(),
+
+              // Title
               Text("NEXT EVENT", style: TextStyle(decoration: TextDecoration.underline, fontFamily: 'Abril Fatface', fontSize: 30)),
               VerticalPadding(
                 color: Colors.transparent,
@@ -67,21 +76,58 @@ Widget getListView(BuildContext context) {
               VerticalPadding(
                 color: Colors.transparent,
               ),
-              Text("Kashmere Multi-Service Center",
+
+              Text("Acres Homes Multi-Service Center",
                   style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 20, decoration: TextDecoration.underline),
                   textAlign: TextAlign.center),
               VerticalPadding( padding: 4),
-              Text("3:00 PM - 5:00 PM",
+              Text("11:00 AM - 1:00 PM",
                   style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 20),
                   textAlign: TextAlign.center),
               VerticalPadding( padding: 2),
-              Text("10/11/2019 (Friday)",
+              Text("Sepetember 4th (Friday)",
                   style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 20),
                   textAlign: TextAlign.center),
               VerticalPadding( padding: 4),
-              Text("4802 Lockwood Dr, Houston, TX 77026",
+              Text("6719 W Montgomery Road, Houston TX 77091",
                   style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 20, decoration: TextDecoration.underline),
                   textAlign: TextAlign.center),
+
+              // Text("March Event Cancelled",
+              //     style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 28, decoration: TextDecoration.underline),
+              //     textAlign: TextAlign.center),
+              // VerticalPadding( padding: 12),
+              // Text("Information regarding the Second Serving's 'Dinners On Us' events have been added. Please see Calendar & Map for more details",
+              //     style: TextStyle(fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 23),
+              //     textAlign: TextAlign.center),
+
+        //       new Center(
+        //   child: new RichText(
+        //     textAlign: TextAlign.center,
+        //     text: 
+        //     new TextSpan(
+        //       children: [
+        //         new TextSpan(
+        //           text: "The Second Serving's ",
+        //           style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 23),                  
+        //         ),
+        //         new TextSpan(
+        //           text: '"Dinners On Us"',
+        //           style: new TextStyle(color: Colors.blue, fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 23, decoration: TextDecoration.underline),
+        //           recognizer: new TapGestureRecognizer()
+        //             ..onTap = () { launch("https://secondservingshouston.org/dinnersonus");
+        //           },
+        //         ),
+        //          new TextSpan(
+        //           text: " event information has been added. Please go to Calendar & Map for more details.",
+        //           style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontFamily: 'Questrial', fontSize: 23),
+        //         ),
+        //       ],
+        //     ),
+        //   ),
+        // ),
+
+
               VerticalPadding(
                 color: Colors.transparent,
               ),
@@ -90,9 +136,106 @@ Widget getListView(BuildContext context) {
               VerticalPadding(
                 color: Colors.transparent,
               ),
+              // End title
+
               Text("EVENT PHOTOS", style: TextStyle(decoration: TextDecoration.underline, fontFamily: 'Abril Fatface', fontSize: 30)),
               VerticalPadding(
                 color: Colors.transparent,
+              ),
+
+              RaisedButton(
+                color: Colors.green,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => redford_1()));
+                },
+                child: Text(
+                  "Redford 6/19/2020",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+
+              RaisedButton(
+                color: Colors.green,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => sunnyside_8()));
+                },
+                child: Text(
+                  "Sunnyside 2/15/20",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+
+              RaisedButton(
+                color: Colors.green,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => kashmere_7()));
+                },
+                child: Text(
+                  "Kashmere 1/17/20",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+
+
+              RaisedButton(
+                color: Colors.green,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => kashmere_6()));
+                },
+                child: Text(
+                  "Kashmere 12/23/19",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              RaisedButton(
+                color: Colors.green,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => sunnyside_7()));
+                },
+                child: Text(
+                  "Sunnyside 11/25/19",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              RaisedButton(
+                color: Colors.green,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => kashmere_5()));
+                },
+                child: Text(
+                  "Kashmere 10/11/19",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
               ),
               RaisedButton(
                 color: Colors.green,
