@@ -8,7 +8,7 @@ class Calendar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Calendar',
+      title: 'dooboolab flutter calendar',
       debugShowCheckedModeBanner: false,
       theme: new ThemeData(
         primarySwatch: Colors.blue,
@@ -53,6 +53,34 @@ class _CalendarThing extends State<CalendarThing> {
     new DateTime(2019,12,23),
     new DateTime(2020,1,17),
     new DateTime(2020,2,15),
+    //new DateTime(2020,3,16),
+    //new DateTime(2020,4,18),
+    //new DateTime(2020,5,16),
+    new DateTime(2020,5,5),
+    new DateTime(2020,5,7),
+    new DateTime(2020,5,12),
+    new DateTime(2020,5,14),
+    new DateTime(2020,5,19),
+    new DateTime(2020,5,21),
+    new DateTime(2020,5,26),
+    new DateTime(2020,5,28),
+    //june
+    new DateTime(2020,6,2),
+    new DateTime(2020,6,4),
+    new DateTime(2020,6,9),
+    new DateTime(2020,6,11),
+    new DateTime(2020,6,16),
+    new DateTime(2020,6,18),
+    new DateTime(2020,6,23),
+    new DateTime(2020,6,25),
+    new DateTime(2020,6,30),
+    new DateTime(2020,7,2),
+
+    new DateTime(2020,9,4),
+    new DateTime(2020,10,9),
+    new DateTime(2020,11,23),
+    new DateTime(2020,12,21),
+    
   };
   EventList<Event> _markedDateMap = new EventList<Event>();
 
@@ -214,8 +242,35 @@ showSummary(BuildContext context, DateTime date) {
     new DateTime(2019,11,25)  : "Sunnyside Multi-Service Center",
     new DateTime(2019,12,23) : "Kashmere Multi-Service Center",
     new DateTime(2020,1,17) : "Kashmere Multi-Service Center",
-    new DateTime(2020,2,15) : "Sunnyside Multi-Service Center"
+    new DateTime(2020,2,15) : "Sunnyside Multi-Service Center",
+    //new DateTime(2020,3,16) : "Sunnyside Multi-Service Center",
+    //new DateTime(2020,4,18) : "The Redford Apartments",
+    //new DateTime(2020,5,16) : "Sunnyside Multi-Service Center"
+    new DateTime(2020,5,5) : "Dinner On Us - Second Serving",
+    new DateTime(2020,5,7) : "Dinner On Us - Second Serving",
+    new DateTime(2020,5,12) : "Dinner On Us - Second Serving",
+    new DateTime(2020,5,14) : "Dinner On Us - Second Serving",
+    new DateTime(2020,5,19) : "Dinner On Us - Second Serving",
+    new DateTime(2020,5,21) : "Dinner On Us - Second Serving",
+    new DateTime(2020,5,26) : "Dinner On Us - Second Serving",
+    new DateTime(2020,5,28) : "Dinner On Us - Second Serving",
 
+    new DateTime(2020,6,2) : "Dinner On Us - Second Serving",
+    new DateTime(2020,6,4) : "Dinner On Us - Second Serving",
+    new DateTime(2020,6,9) : "Dinner On Us - Second Serving",
+    new DateTime(2020,6,11) : "Dinner On Us - Second Serving",
+    new DateTime(2020,6,16) : "Dinner On Us - Second Serving",
+    new DateTime(2020,6,18) : "Dinner On Us - Second Serving",
+    new DateTime(2020,6,23) : "Dinner On Us - Second Serving",
+    new DateTime(2020,6,25) : "Dinner On Us - Second Serving",
+    new DateTime(2020,6,30) : "Dinner On Us - Second Serving",
+    new DateTime(2020,7,2) : "Dinner On Us - Second Serving",
+    
+    new DateTime(2020,9,4)  : "Acres Homes Multi-Service Center",
+    new DateTime(2020,10,9) : "Sunnyside Multi-Service Center",
+    new DateTime(2020,11,23) : "Acres Homes Multi-Service Center",
+    new DateTime(2020,12,21) : "Sunnyside Multi-Service Center",
+    
     };
 
     if (eventDetailMaps.containsKey(date))
@@ -224,12 +279,26 @@ showSummary(BuildContext context, DateTime date) {
 Houston, TX 77051""";
       var kashmereAddress = """4802 Lockwood Dr 
 Houston, TX 77026""";
+      var redfordAddress = """1221 Redford Street
+Houston, TX 77034""";
+      var acresAddress = """6719 W Montgomery Road
+Houston, TX 77091""";
+
 
     var location  = eventDetailMaps[date];
-    var address = location.contains("Sunny") ? sunnysideAddress : kashmereAddress;
-    var eventTime = DateFormat('EEEE').format(date) == "Friday" ? "3:00 PM - 5:00 PM" : "11:00 AM - 1:00 PM";
+    var address = location.contains("Redford") ? redfordAddress : (location.contains("Sunny") ? sunnysideAddress : kashmereAddress);
+    //address = """702 Avenida De Las Americas 
+//Houston, TX""";
+    var eventTime = location.contains("Redford") ? "9:30 AM - 12:30 PM" : (DateFormat('EEEE').format(date) == "Friday" ? "3:00 PM - 5:00 PM" : "11:00 AM - 1:00 PM");
+    //eventTime = "10:00 AM - 12:00 PM";
     var dateDisp = DateFormat('MM/dd/yyyy').format(date);
-    var contactNo = location.contains("Sunny") ? "(832) 395-0069" : "(832) 393-5503";
+
+    if (location.contains("Acres"))
+    {
+      address = acresAddress;
+      eventTime = "11:00 AM - 01:00 PM";
+    }
+    //var contactNo = location.contains("Sunny") ? "(832) 395-0069" : "(832) 393-5503";
 
 
     showDialog(
