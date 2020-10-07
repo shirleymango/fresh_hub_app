@@ -16,7 +16,7 @@ class Map extends StatefulWidget {
 class _MapState extends State<Map>{
   GoogleMapController _controller;
   double zoom = 11.0;
-  static const LatLng _center = const LatLng(29.656388, -95.3585341);
+  static const LatLng _center = const LatLng(29.7548563,-95.3591967);
   final Set<Marker> _markers = new Set();
   LatLng _lastMapPosition = _center;
   MapType _currentMapType = MapType.normal;
@@ -51,6 +51,33 @@ class _MapState extends State<Map>{
         infoWindow: InfoWindow(
           title:"Kashmere Multi-Service Center",
           snippet: "4802 Lockwood Dr 77026",
+        ),
+        icon: BitmapDescriptor.defaultMarker,
+      ));
+      _markers.add(Marker(
+        markerId: MarkerId("The Redford Apartments"),
+        position: const LatLng(29.6445707,-95.2431433),
+        infoWindow: InfoWindow(
+          title:"The Redford Apartments",
+          snippet: "1221 Redfort Street 77034",
+        ),
+        icon: BitmapDescriptor.defaultMarker,
+      ));
+      _markers.add(Marker(
+        markerId: MarkerId("Second Serving's Downtown Drive-through Distribution"),
+        position: const LatLng(29.7548563,-95.3591967),
+        infoWindow: InfoWindow(
+          title:"Second Serving's Downtown Drive-through Distribution",
+          snippet: "702 Avenida De Las Americas Houston, TX",
+        ),
+        icon: BitmapDescriptor.defaultMarker,
+      ));
+      _markers.add(Marker(
+        markerId: MarkerId("Acres Homes Multi-Service Center"),
+        position: const LatLng(29.8574957,-95.4220661),
+        infoWindow: InfoWindow(
+          title:"Acres Homes Multi-Service Center",
+          snippet: "6719 W Montgomery Road, Houston TX 77091",
         ),
         icon: BitmapDescriptor.defaultMarker,
       ));
