@@ -30,7 +30,10 @@ class _LocalNotificationWidgetState extends State<LocalNotificationWidget> {
     new DateTime(2019,11,25,11)  : "Sunnyside Multi-Service Center",
     new DateTime(2019,12,23,11) : "Kashmere Multi-Service Center",
     new DateTime(2020,1,17,15) : "Kashmere Multi-Service Center",
-    new DateTime(2020,2,15,11) : "Sunnyside Multi-Service Center"
+    new DateTime(2020,2,15,11) : "Sunnyside Multi-Service Center",
+    //new DateTime(2020,3,16,11) : "Sunnyside Multi-Service Center",
+    // new DateTime(2020,4,18,9,30) : "The Redford Apartments",
+    // new DateTime(2020,5,16,11) : "Sunnyside Multi-Service Center"
 
     };
 
@@ -99,12 +102,14 @@ class _LocalNotificationWidgetState extends State<LocalNotificationWidget> {
       Houston, TX 77051""";
           var kashmereAddress = """4802 Lockwood Dr 
       Houston, TX 77026""";
+          var redfordAddress = """1221 Redford Street
+      Houston, TX 77034""";
       
           var payloadJson = {
-            "address" : eventDate.value.contains("Sunny") ? sunnysideAddress : kashmereAddress,
+            "address" : eventDate.value.contains("Redford") ? redfordAddress : (eventDate.value.contains("Sunny") ? sunnysideAddress : kashmereAddress),
             "eventDate" : DateFormat('MM/dd/yyyy').format(eventDate.key),
             "eventFromTime" : DateFormat('hh:mm').format(eventDate.key),
-            "eventToTime" : DateFormat('hh:mm').format(eventDate.key.add(new Duration(hours: 2))),
+            "eventToTime" : eventDate.value.contains("Redford") ? DateFormat('hh:mm').format(eventDate.key.add(new Duration(hours: 3))) : DateFormat('hh:mm').format(eventDate.key.add(new Duration(hours: 2))),
             "location" : eventDate.value
           };
 
