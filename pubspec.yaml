@@ -7,7 +7,7 @@ description: A new Flutter application.
 # Both the version and the builder number may be overridden in flutter
 # build by specifying --build-name and --build-number, respectively.
 # Read more about versioning at semver.org.
-version: 1.0.0+1
+version: 5.1.5+16
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
@@ -18,8 +18,11 @@ dependencies:
   flutter_calendar: ^0.0.8
   flutter_calendar_carousel: ^1.3.7
   google_maps_flutter: ^0.5.2
-  url_launcher: ^5.0.2
-  font_awesome_flutter: ^8.2.0
+  url_launcher: ^5.1.0
+  flutter_launcher_icons: "^0.7.2"
+  font_awesome_flutter: ^8.5.0
+  flutter_local_notifications: ^0.8.2
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
@@ -28,6 +31,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+flutter_icons:
+  android: true 
+  ios: true
+  image_path: "assets/ic_launcher.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
@@ -51,6 +58,7 @@ flutter:
 
   assets:
     - assets/images/produce.jpg
+    #- assets/images/produce_half.jpg
     - assets/images/sunnyside1-1.jpg
     - assets/images/sunnyside1-2.jpg
     - assets/images/sunnyside1-3.jpg
@@ -94,7 +102,35 @@ flutter:
     - assets/images/kashmere4-1.jpg
     - assets/images/kashmere4-2.jpg
     - assets/images/kashmere4-3.jpg
+    - assets/images/sunnyside5-1.jpg
+    - assets/images/sunnyside5-2.jpg
+    - assets/images/sunnyside5-3.jpg
+    - assets/images/sunnyside5-4.jpg
+    - assets/images/sunnyside6-1.jpg
+    - assets/images/sunnyside6-2.jpg
+    - assets/images/sunnyside6-3.jpg
+    - assets/images/sunnyside6-4.jpg
+    - assets/images/kashmere5-1.jpg
+    - assets/images/kashmere5-2.jpg
+    - assets/images/kashmere5-3.jpg
+    - assets/images/sunnyside7-1.jpg
+    - assets/images/sunnyside7-2.jpg
+    - assets/images/sunnyside7-3.jpg
+    - assets/images/sunnyside7-4.jpg
+    - assets/images/kashmere6-1.jpg
+    - assets/images/kashmere6-2.jpg
+    - assets/images/kashmere6-3.jpg
+    - assets/images/kashmere7-1.jpg
+    - assets/images/kashmere7-2.jpg
+    - assets/images/kashmere7-3.jpg
 
+    - assets/images/sunnyside8-1.jpg
+    - assets/images/sunnyside8-2.jpg
+    - assets/images/sunnyside8-3.jpg
+
+    - assets/images/redford1-1.jpg
+    - assets/images/redford1-2.jpg
+    - assets/images/redford1-3.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
